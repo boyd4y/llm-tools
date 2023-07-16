@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build chatglm --file Dockerfile --tag boyd4y/llm_chatglm:$(date +%s)
+      run: docker build . --file docker/chatglm/Dockerfile --tag boyd4y/llm_chatglm:$(date +%s)
