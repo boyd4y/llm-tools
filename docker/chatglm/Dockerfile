@@ -38,6 +38,6 @@ COPY README.md /usr/share/nginx/html/README.md
 COPY pre_start.sh /pre_start.sh
 COPY post_start.sh /post_start.sh
 COPY start.sh /
-RUN chmod +x /start.sh
+RUN chmod +x start.sh
 
-CMD [ "/start.sh" ]
+CMD [ "start.sh" ]
