@@ -1,7 +1,9 @@
 # start from runpod pytorch container
-ARG BASE_IMAGE=runpod/pytorch:3.10-1.13.1-116
+ARG CUDA_VERSION="11.8.0"
+ARG CUDNN_VERSION="8"
+ARG UBUNTU_VERSION="22.04"
 
-FROM ${BASE_IMAGE} as dev-base
+FROM thebloke/cuda$CUDA_VERSION-ubuntu$UBUNTU_VERSION-textgen:latest as base
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
