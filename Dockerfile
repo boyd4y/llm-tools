@@ -22,6 +22,7 @@ RUN pip install ipywidgets
 
 RUN cd /workspace && git clone https://github.com/oobabooga/text-generation-webui.git && cd /workspace/text-generation-webui && pip install -r requirements.txt
 # RUN cd /workspace/text-generation-webui && python download-model.py PygmalionAI/pygmalion-6b
+RUN cd /workspace && git clone https://github.com/boyd4y/ChatGLM2-6B.git && cd /workspace/ChatGLM2-6B && pip install -r requirements.txt
 
 RUN mv /workspace/text-generation-webui /text-generation-webui
 

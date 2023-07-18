@@ -2,6 +2,16 @@
 
 echo "Launching Oobabooga web UI Server"
 cd /workspace/text-generation-webui
-python download-model.py THUDM/chatglm-6b
-python server.py --model THUDM_chatglm-6b --trust-remote-code --listen &
+# python download-model.py THUDM/chatglm-6b
+# python download-model.py THUDM/chatglm2-6b
+# python server.py --model THUDM_chatglm-6b --trust-remote-code --listen &
 echo "Oobabooga web UI Server Ready"
+
+
+echo "Launching ChatGLM2"
+cd /workspace/ChatGLM2-6B
+python web_demo.py &
+# python download-model.py THUDM/chatglm-6b
+# python download-model.py THUDM/chatglm2-6b
+# python server.py --model THUDM_chatglm-6b --trust-remote-code --listen &
+echo "ChatGLM2 Ready"
