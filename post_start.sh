@@ -1,11 +1,7 @@
 #!/bin/bash
 
 echo "Launching Oobabooga web UI Server"
-#python server.py --listen # runs Oobabooga text generation webui on port 7860
-if [ "$WEBUI" == "chatbot" ]; then
-    cd /workspace/text-generation-webui && \
-    python server.py --listen --cai-chat &
-else
-    cd /workspace/text-generation-webui && \
-    python server.py --listen &
-fi
+cd /workspace/text-generation-webui
+python download-model.py THUDM/chatglm-6b
+python server.py --model THUDM_chatglm-6b --trust-remote-code --listen &
+echo "Oobabooga web UI Server Ready"
