@@ -16,6 +16,8 @@ RUN apt-get update --yes && \
     nginx\
     wget\
     bash\
+    vim\
+    nano\
     rsync \
     blobfuse \
     openssh-server &&\
