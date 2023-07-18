@@ -15,3 +15,12 @@ python web_demo.py &
 # python download-model.py THUDM/chatglm2-6b
 # python server.py --model THUDM_chatglm-6b --trust-remote-code --listen &
 echo "ChatGLM2 Ready"
+
+echo 'Download Dataset'
+mkdir /workspace/dataset
+cd /workspace/dataset
+wget -O AdvertiseGen.tar.gz https://drive.google.com/u/0/uc?id=13_vf0xRTQsyneRKdD1bZIr93vBGOczrk&export=download
+tar -xvf AdvertiseGen.tar.gz
+mv AdvertiseGen /workspace/ChatGLM2-6B/ptuning
+echo 'Dataset Ready'
+
