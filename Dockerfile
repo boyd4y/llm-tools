@@ -1,9 +1,4 @@
-# start from runpod pytorch container
-ARG CUDA_VERSION="11.8.0"
-ARG CUDNN_VERSION="8"
-ARG UBUNTU_VERSION="22.04"
-
-FROM thebloke/cuda$CUDA_VERSION-ubuntu$UBUNTU_VERSION-textgen:latest as base
+FROM runpod/pytorch:2.0.1-py3.10-cuda11.8.0-devel
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
